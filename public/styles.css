@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header,main,footer{
+    font-family: 'Lora', serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li{
+    list-style: none;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-image: url('https://s3-alpha-sig.figma.com/img/8bab/c6de/10e133c6518d8edcb5ca2d5585b71204?Expires=1687132800&Signature=CDFlrAuAe7X7zqc~aU3gEeDs2vgKfUsgZYuFIpM4Pa4Se73w5RVCOMqQ7xYbOLJGOLP-3I9rvVZ9aCqMZATR6jcNEkwm~jRpSjvbEHKaZWlX8w0dhWsArHjXO76afJDFhoMHUQRnULT5UuRnVorTlQjPGK~hbR5l0ShpumF8ZUURe66S7gcWMeBGU~2DB0hoQ~f4ZWYvX-N5kEgaNk~36XccUahteivmXxapOkxu5J2X-9yNYM057W6f4sLLU1udaMJSmmwxUHz6a90nVNJ3p6QxYFXvdgz8C3QQBn4bvI74buiLgN63Wiyjn-Fe7lno6rtLr73lSS~iPv8nWFC9yQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+}
+.logo{
+    font-weight: 700;
+    font-size: 20px;
+    color: #F8F9FA;
+    cursor: pointer;
+    position: absolute;
+    left: 70px;
+}
+.navigation{
+    font-family: 'Roboto' , serif;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: #F8F9FA;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+.nav-container{
+    position: absolute;
+    right: 70px;
+    display: flex;
+}
+.nav-items{
+    display: flex;
+    gap: 18px;
+    font-size: 12px;
+    padding: 1px 10px;
+}
+.nav-item a{
+    padding: 3px;
+    color: #F8F9FA;
+}
+.nav-item a:hover,.nav-item a:active,.nav-item a:focus{
+    border-bottom: 2px solid #D4A373;
+}
+.nav-items:not(:last-child){
+    border-right: 0.5px solid #E5E5E5;
+
+}
+.header-content{
+    position: absolute;
+    width: 530px;
+    left: 70px;
+    bottom: 140px;
+}
+.article-title{
+    color: #FFFFFF;
+    line-height: 46.08px;
+    font-size: 36px;
+    font-weight: 700;
+}
+.genre-type{
+    color: #FFFFFF;
+    font-size: 10px;
+    line-height: 11.72px;
+    font-family: 'Roboto' , serif;
+    font-weight: 700;
+    width: max-content;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.article-summary , .time , .line{
+    color: #E5E5E5;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+}
+.article-bottom{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.line{
+    border-top: 1px solid #E5E5E5;
+    width: 40px;
+    
+    
+}
