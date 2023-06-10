@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="public/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,13 +15,18 @@
     <header class="header">
         <div class="navigation">
             <div class="logo">MYBlog</div>
+            <button class="hamburger"> 
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
             <nav class="nav-container">
-                <ul class="nav-items">
+                <div class="navbar">
+                    <ul class="nav-items">
                     <li class="nav-item"><a href="#">Home</a></li>
                     <li class="nav-item"><a href="#">About</a></li>
                     <li class="nav-item"><a href="#">Articles</a></li>
                     <li class="nav-item"><a href="#">Contact Us</a></li>
                 </ul>
+                </div>
                 <ul class="nav-items">
                     <li class="nav-item"><a href=""><i class="fa-brands fa-facebook"></i></a></li>
                     <li class="nav-item"><a href=""><i class="fa-brands fa-twitter"></i></a></li>
@@ -245,8 +249,8 @@
             </div>
         </div>
         <div class="subfooter">
-            <p>2021 | RUNO Publisher Studio</p>
-            <p>Subscribe Now</p>
+            <div class="publisher">2021 | RUNO Publisher Studio</div>
+            <div class="subscribe">Subscribe Now</div>
         </div>
     </footer>
     <script src="index.js"></script>
