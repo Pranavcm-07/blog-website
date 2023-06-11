@@ -88,7 +88,7 @@ header{
 .article-title{
     color: #FFFFFF;
     line-height: 46.08px;
-    font-size: 36px;
+    font-size: 45px;
     font-weight: 700;
 }
 .genre-type{
@@ -99,19 +99,23 @@ header{
     font-weight: 700;
     width: max-content;
     padding: 5px 10px;
+    margin-bottom: 5px ;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.15);
 }
 .article-summary , .time , .line{
     color: #E5E5E5;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 20px;
 }
 .article-bottom:not(:last-child){
     display: flex;
     gap: 15px;
     align-items: center;
+}
+.article-title{
+    margin-bottom: 15px;
 }
 
 .line{
@@ -297,7 +301,6 @@ header{
 }
 .footer div{
     height: max-content;
-    /* width: max-content; */
 }
 .footer-connections{
     display: flex;
@@ -318,6 +321,7 @@ header{
     display: flex;
     justify-content: center;
 }
+
 
 @media (max-width: 1415px ) {
     .articles{
@@ -405,9 +409,11 @@ header{
         width: 100%;
     }
     .article-title{
+        font-size: 36px;
         line-height: 1.2;
     }
     .article-summary , .time , .line{
+        font-size: 12px;
         line-height: 1.5;
     }
     .article{
