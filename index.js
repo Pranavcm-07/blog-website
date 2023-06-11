@@ -8,13 +8,21 @@ document.getElementsByClassName('hamburger')[0].addEventListener('click',() => {
     if (clicked){
         document.getElementsByClassName('hamburger')[0].innerHTML = '<i class="fa fa-bars" aria-hidden="true"></i>'
         document.getElementsByClassName('hamburger')[0].classList.remove('clicked')
-        document.getElementsByClassName('header-content')[0].style.transform = 'translate(15%,-20%)';
+        if(document.getElementsByClassName('hamburger')[0].classList.contains('pages')){
+            document.getElementsByClassName('header-content')[0].style.transform = 'translateY(0)';
+        }else{
+            document.getElementsByClassName('header-content')[0].style.transform = 'translate(15%,-20%)';
+        }        
         document.getElementsByClassName('header-content')[0].style.transition = '.45s';
         document.getElementsByClassName('navbar')[0].style.transform = 'translateY(-200%)'
     }else{
         document.getElementsByClassName('hamburger')[0].innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>'
         document.getElementsByClassName('hamburger')[0].classList.add('clicked')
-        document.getElementsByClassName('header-content')[0].style.transform = 'translate(15%,30%)';
+        if(document.getElementsByClassName('hamburger')[0].classList.contains('pages')){
+            document.getElementsByClassName('header-content')[0].style.transform = 'translateY(42%)';
+        }else{
+            document.getElementsByClassName('header-content')[0].style.transform = 'translate(15%,30%)';
+        }
         document.getElementsByClassName('header-content')[0].style.transition = '.45s';
         document.getElementsByClassName('navbar')[0].style.transform = 'translateY(0)'
     }
