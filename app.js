@@ -43,10 +43,38 @@ const article = new Article({
 
 
 app.get('/',(req,res) => {
-    res.render('pages/home')
+    Article.find()
+        .then((found) => {
+            res.render('pages/home' , {articlelist: found})
+        })
+        .catch((err) => {
+            console.log(err)
+        })
 })
-app.get('/page',(req,res) => {
-    res.render('pages/webpages')
+app.get('/article/:postid',(req,res) => {
+    const postId = req.params.postid
+    Article.findOne({_id:postId})
+        .then((found) => {
+            console.log(found)
+            res.render('pages/webpages',{articlecontent:found})
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+})
+app.get('/newarticle',(req,res) => {
+    res.render('pages/newarticle')
+})
+app.post('/newarticle',(req,res) => {
+    const article = new Article({
+        image:req.body.image,
+        genre:req.body.genretype,
+        title:req.body.titlename,
+        summary:req.body.summary,
+        fullcontent:req.body.fullcontent
+    })
+    article.save()
+    res.redirect('/')
 })
 
 

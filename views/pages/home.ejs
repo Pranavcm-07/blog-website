@@ -1,5 +1,86 @@
 <%- include('../partials/header') -%>
-<%- include('./articles') -%>
-<%- include('./articlesection') -%>
-<%- include('./editorspick') -%>
+<section id="popular-topics">
+    <div class="article-header">
+        <h1 class="section-title">Popular topics</h1>
+        <div class="article-categories">
+            <ul class="nav-items split-one">
+                <li class="nav-item"><a href="#">All</a></li>
+                <li class="nav-item"><a href="#">Australia</a></li>
+                <li class="nav-item"><a href="#">Travel</a></li>
+                <li class="nav-item"><a href="#">Fashion</a></li>
+                <li class="nav-item"><a href="#">Technology</a></li>
+                <li class="nav-item"><a href="#">Branding</a></li>
+            </ul>
+            <!-- <ul class="nav-items split-two">
+                <li class="nav-item"><a href="">View All</a></li>
+            </ul> -->
+        </div>
+    </div>
+    <div class="articles">
+        <%articlelist.forEach(article => {%>
+            <div class="article">
+                <div class="img">
+                    <a href="/article/<%=article._id%>"><img src=<%=article.image %>></a>
+                    <h6 class="genre-type"><%=article.genre %></h6>
+                </div>
+            <span class="time"></span>
+            <h3 class="article-section-header"><a href="/article/<%=article._id%>"><%=article.title %></a></h3>
+            <p class="article-section-summary"><%=article.summary %></p>
+            </div>
+        <%});%>
+    </div>
+</section>
+<section id="article-section">
+    <div class="article-content">
+        <div class="article-top">
+            <h6 class="genre-type">FASHION</h6>
+            <h1 class="article-title">Richird Norton photorealistic rendering as real photos</h1>
+        </div>
+        <div class="article-bottom">
+            <p class="article-summary">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.</p>
+            <span class="line"></span>
+            <span class="time"></span>
+        </div>
+    </div>
+</section>
+<section id="editors-pick">
+    <div class="title">
+        <h1 class="section-title">Editor's Pick</h1>
+    </div>
+    <div class="editor-pick-cards">
+        <div class="editor-pick-card">
+            <img src="https://s3-alpha-sig.figma.com/img/b167/5f9d/be3053a3a8fa74031a90c192bb2f14f0?Expires=1687132800&Signature=ZHYd3lDE-uq~eWpXacgTH0YICPkqFLI2a81V6MHT9ZLHKZ3kUWBo2Tqgbv85YEQ7GqjmQT2Xf6BBEuRYLouEL4Qs8jbUP9BwvbHPfpwOHqV~j48KwilcSGuNfhkI8ZlMzkBZFo3l2LEq1pyiPAu9BNKkHaMC~WS1eIFMKe7jyCtt6q~Tr0L0Y6xXjqfb-Vg6pvvOOVdkX2DxGOS~UrchxC6~LtlzrrTIUMCqg8cy4ENNn-ruk7PB5yVpn0QrhORdOuLJjkG~aSHxfe14BsJ~sMgXs8xjgL~y31A144agqxJ7sGm800vTP5RICKAYCfCXj6PgWX8GfeBsD~9-tGTZng__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
+            <h6 class="genre-type">FASHION</h6>
+            <div class="card-container">
+                <div class="editor-pick-card-content">
+                    <span class="time"></span>
+                    <p class="card-title"><a href="/page">Dream destinations to visit this year in Paris</a></p>
+                    <p class="card-summary">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.</p>
+                </div>
+            </div>
+        </div>
+        <div class="editor-pick-card">
+            <img src="https://s3-alpha-sig.figma.com/img/e72e/1390/e20e73a878ee780cd4195b966ccc08df?Expires=1687132800&Signature=dyzv6YRfv0u8tb5Oonr0pKTs3XPKiK6N-Iz8WbPCxFtMnwTnOWFUj6phfxQSZ17bo9DZbVmBq7uvmEg-aR-bPEwSzZHPIV1imNKNGSxbmazM6e4~ZypxaYtl393aUjtaWjSX6OdsymMjto8-14jKWuOQIFAq65uhWKIQfbSycYDYRmNOSFtCpSEqLJb8lZSEWQQNcHa8TLoyoq250t3mrdYxDAJNOYVhK3pz6J9F32Q8XVDMBVa2YajFH4XLRlsIK1Kd2uLR~iv57jV7DFeY9mUbNpjQymwhD4SLvk2vpMhYXIYhAg2HT59j~oR~Jf-81VTl3DUVbhXLPn5VLRYnxA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
+            <h6 class="genre-type">FASHION</h6>
+            <div class="card-container">
+                <div class="editor-pick-card-content">
+                    <span class="time"></span>
+                    <p class="card-title"><a href="/page">Dream destinations to visit this year in Paris</a></p>
+                    <p class="card-summary">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.</p>
+                </div>
+            </div>
+        </div>
+        <div class="editor-pick-card">
+            <img src="https://s3-alpha-sig.figma.com/img/ecc2/e4f0/12e39c6467bf807eb54727401871cc38?Expires=1687132800&Signature=DKhXMMWRAc9ucuRXCgZT7zK4OppRURziX0lXz3QUIk-pD02byVnRttVy76MbZAt8xh3U7WmH4V68p7HzzwnWxycgN5BTDMIc1zXOJ0hayBG~hAMskzJ95ddUWpW4R-bht3i68OyxddQqxjV1fvor4txQoae6~RIqrvkvli4wo-wiFBw3f1LUJa1GirQakrXM257hl1uA~L8fhvGuLUor9K12680ved-CtgfBFZbL8N6o2~oijtu60A9vzeTQ2ms6FT8z0E0urfyLC~oH9q81zFRffK6z05I1d6Z2Dmpe-svky1n~R2fKKR0SvWnj6MWYk-o32-03M7g~7CWiN1MzmA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
+            <h6 class="genre-type">FASHION</h6>
+            <div class="card-container">
+                <div class="editor-pick-card-content">
+                    <span class="time"></span>
+                    <p class="card-title"><a href="/page">Dream destinations to visit this year in Paris</a></p>
+                    <p class="card-summary">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <%- include('../partials/footer') -%>

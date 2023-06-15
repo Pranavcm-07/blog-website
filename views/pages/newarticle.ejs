@@ -1,0 +1,21 @@
+<%- include('../partials/navbar') -%>
+<link rel="stylesheet" href="/newarticle.css">
+
+<div class="newarticle">
+    <div class="form-group">
+        <form action="/newarticle" method="post">
+            <label for="image">Image URL</label><br>
+            <input type="text" name="image"><br>
+            <label for="genretype">Genre</label><br>
+            <input type="text" name="genretype"><br>
+            <label for="titlename">Title</label><br>
+            <input type="text" name="titlename"><br>
+            <label for="summary">Summary</label><br>
+            <textarea name="summary" id="" class="textarea-control" cols="30" rows="3" placeholder="Enter summary"></textarea><br>
+            <label for="fullcontent">Fullcontent</label><br>
+            <textarea name="fullcontent" id="" class="textarea-control" cols="30" rows="10" placeholder="Enter Full Content HERE!!"></textarea><br> 
+            <button type="submit" class="form-btn">Sumbit</button>
+        </form>
+    </div>
+</div>
+<%- include('../partials/footer') -%>
