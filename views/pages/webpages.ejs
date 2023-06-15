@@ -1,7 +1,22 @@
-<%- include('../partials/header') -%>
+<%- include('../partials/navbar') -%>
 <head>
     <link rel="stylesheet" href="/pages.css">
+    <link rel="stylesheet" href="/newarticle.css">
 </head>
+    <section id="article-section">
+        <img src=<%= articlecontent.image %> alt="image">
+        <div class="article-content">
+            <div class="article-top">
+                <h6 class="genre-type"><%= articlecontent.genre %></h6>
+                <h1 class="article-title"><%= articlecontent.title %></h1>
+            </div>
+            <div class="article-bottom">
+                <p class="article-summary"><%= articlecontent.summary %></p>
+                <span class="line"></span>
+                <span class="time"></span>
+            </div>
+        </div>
+    </section>
     <section id="content">
         <div class="info">
             <span class="time"></span>
@@ -18,6 +33,25 @@
             </ul>
         </div>
     </section>
-<%- include('./editorspick') -%>
+    <section id="editors-pick">
+        <div class="title">
+            <h1 class="section-title">Editor's Pick</h1>
+        </div>
+        <div class="editor-pick-cards">
+            <%articles.forEach(article => {%>
+                <div class="editor-pick-card">
+                    <a href="/article/<%=article._id%>"><img src=<%=article.image%> alt=""></a>
+                    <h6 class="genre-type"><%=article.genre%></h6>
+                    <div class="card-container">
+                        <div class="editor-pick-card-content">
+                            <span class="time"></span>
+                            <p class="card-title"><a href="/article/<%=article._id%>"><%=article.title%></a></p>
+                            <p class="card-summary"><%=article.summary%></p>
+                        </div>
+                    </div>
+                </div>
+            <%}) %>
+        </div>
+    </section>
 
 <%- include('../partials/footer') -%>

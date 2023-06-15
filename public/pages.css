@@ -1,8 +1,9 @@
 .header-content{
     width: 50%;
     text-align: center;
-    margin: auto;
-    position: unset;
+    left: 25%;
+    top: auto;
+    position: absolute;
 }
 .header-content .genre-type{
     margin: 0 auto;
@@ -60,6 +61,8 @@
 @media (max-width: 750px) {
     .header-content{
         width: 80%;
+        position: absolute;
+        left: 10%;
     }
     .article-full-content-container{
         margin: 150px 10% 70px;
