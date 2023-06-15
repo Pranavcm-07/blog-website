@@ -3,8 +3,16 @@ header{
     height: 80px;
 }
 .navigation{
-    background-color: rgba(33, 37, 41, 1);
+    background-color: rgb(255, 255, 255);
 }
+.logo,.nav-item a,.hamburger{
+    color: black;
+}
+.navbar,.nav-items:not(:last-child){
+    border-right: 0.5px solid black;
+
+}
+
 .newarticle{
     width: 80%;
     margin: 150px auto;

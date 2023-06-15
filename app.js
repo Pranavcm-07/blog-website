@@ -27,25 +27,17 @@ const articleSchema = mongoose.Schema({
 
 const Article = mongoose.model('article',articleSchema)
 
-const article = new Article({
-    image:'https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/bltee886584fd1cd345/60db8718892a730f5883a347/68a712aa7ffd3da7d91c2fe1469bda58990f7ab7.jpg?auto=webp&format=pjpg&width=1200&quality=60',
-    genre:'FASHION',
-    title:'sample title',
-    summary:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis a justo ac commodo. Nunc egestas, dolor commodo semper rutrum, lorem elit venenatis erat, ',
-    fullcontent:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis a justo ac commodo. Nunc egestas, dolor commodo semper rutrum, lorem elit venenatis erat, \
-    quis pulvinar nisl risus quis eros. Mauris eu massa metus. Aenean vel maximus eros, et fringilla turpis. Nulla in cursus mauris, non congue dolor. Nunc volutpat metus sit amet\
-    lacus mollis, sit amet porta mauris pellentesque. Nam nec arcu metus. Proin ex ipsum, dignissim eu dapibus nec, placerat ac urna. Aliquam sodales felis in turpis elementum faucibus.\
-    Donec pretium tempus ex. Maecenas in congue nunc. Aenean libero justo, pharetra id aliquam vel, pellentesque sit amet sapien. Proin eu vestibulum felis.'
-})
-
-// article.save()
-
-
 
 app.get('/',(req,res) => {
     Article.find()
         .then((found) => {
-            res.render('pages/home' , {articlelist: found})
+            Article.find().limit(3)
+                .then((articles) => {
+                    res.render('pages/home' , {articlelist: found,articles:articles})               
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
         })
         .catch((err) => {
             console.log(err)
@@ -55,8 +47,13 @@ app.get('/article/:postid',(req,res) => {
     const postId = req.params.postid
     Article.findOne({_id:postId})
         .then((found) => {
-            console.log(found)
-            res.render('pages/webpages',{articlecontent:found})
+            Article.find().limit(3)
+                .then((articles) => {
+                    res.render('pages/webpages',{articlecontent:found,articles:articles})                
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
         })
         .catch((err) => {
             console.log(err)
@@ -75,6 +72,14 @@ app.post('/newarticle',(req,res) => {
     })
     article.save()
     res.redirect('/')
+})
+
+app.get('/about',(req,res) => {
+    res.render('pages/about')
+})
+
+app.get('/contact',(req,res) => {
+    res.render('pages/contact')
 })
 
 
