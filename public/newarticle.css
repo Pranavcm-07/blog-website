@@ -1,0 +1,14 @@
+header{
+    background-image: none;
+    height: 80px;
+}
+.navigation{
+    background-color: rgba(33, 37, 41, 1);
+}
+.newarticle{
+    width: 80%;
+    margin: 150px auto;
+}
+input{
+    padding: 5px;
+}
