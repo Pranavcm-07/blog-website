@@ -1,0 +1,67 @@
+*{
+    font-family: 'Roboto' , serif;
+}
+.contact{
+    margin: 70px 170px;
+}
+.contact-header{
+    margin-bottom: 50px;
+    text-align: center;
+    line-height: 1.5;
+}
+.main-container{
+    display: flex;
+}
+.contact-info .content{
+    display: flex;
+    gap: 20px;
+}
+.contact-content-container{
+    padding: 15px;
+    width: 400px;
+}
+.contact-content-container:not(:last-child){
+    border-bottom: 1px solid black;
+}
+.contact-info{
+    width: 65%;
+    line-height: 1.5;
+}
+.user-info-container{
+    background-color: rgba(33, 37, 41, 1);
+    border-radius: 5px;
+    width: 35%;
+    padding: 10px;
+    color: white;
+}
+.icon{
+    margin-right: 10px;
+}
+.user-info{
+    padding: 20px;
+}
+.user-form{
+    margin: 20px auto;
+}
+input{
+    width: 100%;
+    margin: 10px auto;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: inherit;
+}
+input:focus{
+    outline: none;
+}
+.form-button{
+    background-color: white;
+    color: black;
+    padding: 7px 15px;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+}
+.form-button:hover{
+    background-color: rgb(173, 173, 173);
+}
