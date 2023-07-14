@@ -1,22 +1,47 @@
-header{
-    background-image: none;
-    height: 80px;
+*{
+    font-family: 'Roboto' , 'serif';
 }
-.navigation{
-    background-color: rgb(255, 255, 255);
-}
-.logo,.nav-item a,.hamburger{
-    color: black;
-}
-.navbar,.nav-items:not(:last-child){
-    border-right: 0.5px solid black;
-
-}
-
 .newarticle{
-    width: 80%;
-    margin: 150px auto;
+    margin: 100px auto;
 }
-input{
-    padding: 5px;
+.form-group{
+    color: white;
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(33, 37, 41, 1);
+}
+form{
+    padding: 20px;
+}
+input,label,textarea{
+    margin: 15px auto;
+}
+textarea,input{
+    padding: 8px 2px;
+    width: 100%;
+    background-color: inherit;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+}
+textarea{
+    resize: none;
+}
+textarea::-webkit-scrollbar{
+    width: 0;
+}
+.form-btn{
+    background-color: white;
+    color: black;
+    padding: 7px 15px;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+}
+.form-btn:hover{
+    background-color: rgb(173, 173, 173);
 }

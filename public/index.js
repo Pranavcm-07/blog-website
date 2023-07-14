@@ -27,3 +27,12 @@ document.getElementsByClassName('hamburger')[0].addEventListener('click',() => {
         document.getElementsByClassName('navbar')[0].style.transform = 'translateY(0)'
     }
 })
+
+const textarea = document.getElementsByClassName('textarea-control')
+for (let i =0;textarea.length;i++){
+    textarea[i].addEventListener('keyup',e => {
+        const count = e.target.scrollHeight
+        textarea[i].style.height = count+'px'
+    })
+}
+

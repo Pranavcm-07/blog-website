@@ -1,6 +1,6 @@
 <%- include('../partials/navbar') -%>
-<link rel="stylesheet" href="/newarticle.css">
-
+<link rel="stylesheet" href="/navbar.css">
+<link rel="stylesheet" href="newarticle.css">
 <div class="newarticle">
     <div class="form-group">
         <form action="/newarticle" method="post">
@@ -11,11 +11,12 @@
             <label for="titlename">Title</label><br>
             <input type="text" name="titlename"><br>
             <label for="summary">Summary</label><br>
-            <textarea name="summary" id="" class="textarea-control" cols="30" rows="3" placeholder="Enter summary"></textarea><br>
+            <textarea name="summary" id="" class="textarea-control" cols="30" rows="1"></textarea><br>
             <label for="fullcontent">Fullcontent</label><br>
-            <textarea name="fullcontent" id="" class="textarea-control" cols="30" rows="10" placeholder="Enter Full Content HERE!!"></textarea><br> 
-            <button type="submit" class="form-btn">Sumbit</button>
+            <textarea name="fullcontent" id="" class="textarea-control" cols="30" rows="1"></textarea><br> 
+            <button type="submit" class="form-btn">Submit</button>
         </form>
     </div>
 </div>
+<script src="index.js"></script>
 <%- include('../partials/footer') -%>

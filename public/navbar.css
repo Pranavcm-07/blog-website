@@ -1,0 +1,15 @@
+header{
+    background-image: none;
+    height: 80px;
+}
+.navigation{
+    background-color: rgb(255, 255, 255);
+}
+.logo,.nav-item a,.hamburger{
+    color: black;
+}
+.navbar,.nav-items:not(:last-child){
+    border-right: 0.5px solid black;
+
+}
+
