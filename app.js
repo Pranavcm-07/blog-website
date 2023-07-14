@@ -11,11 +11,14 @@ app.use(express.static('public'))
 app.set('view engine','ejs')
 
 
-mongoose.connect('mongodb+srv://pranav:'+process.env.ATLAS_CONNECTION_PASSWORD+'@cluster0.tcjcqt6.mongodb.net/blogDB',{useNewUrlParser:true,useUnifiedTopology: true}).then(() => {
-    console.log('connected to database')
-}).catch((err) => {
-    console.log(err)
-})
+// mongoose.connect('mongodb+srv://pranav:'+process.env.ATLAS_CONNECTION_PASSWORD+'@cluster0.tcjcqt6.mongodb.net/blogDB',{useNewUrlParser:true,useUnifiedTopology: true})
+// .then(() => {
+//     console.log('connected to database')
+// }).catch((err) => {
+//     console.log(err)
+// })
+
+mongoose.connect('mongodb://127.0.0.1:27017/blogDB',{useNewUrlParser:true,useUnifiedTopology: true})
 
 const articleSchema = mongoose.Schema({
     image: String,
@@ -81,12 +84,6 @@ app.get('/about',(req,res) => {
 app.get('/contact',(req,res) => {
     res.render('pages/contact')
 })
-
-
-
-
-
-
 
 
 
