@@ -16,6 +16,9 @@
     display: flex;
     gap: 20px;
 }
+.content-info{
+    width: 100%;
+}
 .contact-content-container{
     padding: 15px;
     width: 400px;
@@ -64,4 +67,33 @@ input:focus{
 }
 .form-button:hover{
     background-color: rgb(173, 173, 173);
+}
+@media (max-width:1110px ) {
+    ..contact-info{
+        width: 50%;
+    }
+    .user-info-container{
+        width: 50%;
+    }
+    .contact-content-container{
+        width: 250px;
+    }
+}
+@media (max-width:750px) {
+    .main-container{
+        display: block;
+    }
+    .contact-info{
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    .user-info-container{
+        width: 100%;
+    }
+    .contact-content-container{
+        width: 100%;
+    }
+    .content-info{
+        text-align: center;
+    }
 }
