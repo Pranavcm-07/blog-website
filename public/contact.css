@@ -49,7 +49,9 @@
 input{
     width: 100%;
     margin: 10px auto;
+    padding: 7px 0;
     border: none;
+    color: white;
     border-bottom: 1px solid white;
     background-color: inherit;
 }
@@ -95,5 +97,10 @@ input:focus{
     }
     .content-info{
         text-align: center;
+    }
+}
+@media (max-width: 560px) {
+    .contact{
+        margin: 70px 50px;
     }
 }

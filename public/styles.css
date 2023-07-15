@@ -32,7 +32,7 @@ header .header-image{
 }
 .logo{
     font-weight: 700;
-    font-size: 20px;
+    font-size: 30px;
     color: #F8F9FA;
     cursor: pointer;
     position: absolute;
@@ -68,7 +68,7 @@ header .header-image{
 .nav-items{
     display: flex;
     gap: 18px;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     padding: 1px 10px;
 }

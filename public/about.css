@@ -1,0 +1,23 @@
+*{
+    font-family: 'Roboto' , 'serif';
+}
+
+.main-container{
+    margin: 150px auto;
+}
+.about-info{
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+}
+.about-header{
+    margin: 50px auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 560px) {
+    .about-info{
+        width: 80%;
+    }
+}

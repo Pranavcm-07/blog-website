@@ -45,3 +45,8 @@ textarea::-webkit-scrollbar{
 .form-btn:hover{
     background-color: rgb(173, 173, 173);
 }
+@media (max-width: 560px) {
+    .form-group{
+        width: 80%;
+    }
+}
